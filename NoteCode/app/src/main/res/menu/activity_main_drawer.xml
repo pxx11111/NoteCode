@@ -3,19 +3,19 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_note"
             android:icon="@drawable/ic_menu_camera"
             android:title="记事本" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_code"
             android:icon="@drawable/ic_menu_gallery"
             android:title="代码编写" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_github"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="github" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_teach"
             android:icon="@drawable/ic_menu_manage"
             android:title="实用教程" />
     </group>

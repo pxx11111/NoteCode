@@ -17,4 +17,6 @@
     <string name="add_picture">Add picture</string>
     <string name="exit">press again to exit</string>
     <string name="empty">no notes yet</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
 </resources>
