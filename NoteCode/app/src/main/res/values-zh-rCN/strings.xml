@@ -38,7 +38,74 @@
     <string name="file_copy_fail">复制文件失败！</string>
     <string name="file_move_fail">移动文件失败！</string>
     <string name="file_notexists">文件不存在！</string>
+    <string name="action_about">关于安浪</string>
+    <string name="action_website">官网</string>
+    <string name="action_taobao">淘宝店</string>
+    <string name="action_scanQRcode">扫一扫</string>
+    <string name="action_compile">PHP编译器</string>
+    <string name="action_wechat">官方微信</string>
+    <string name="action_exit">退出程序</string>
+    <string name="title_activity_about">关于安浪</string>
+    <string name="title_activity_settings">设置</string>
 
+    <string name="scan_tips">\"将二维码图片对准扫描框即可自动扫描\"</string>
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">综合</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">数据同步</string>
+
+    <string name="pref_title_sync_frequency">同步频率</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="pref_title_system_sync_settings">系统同步设置</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">推送提醒</string>
+
+    <string name="pref_title_new_message_notifications">新推送信息</string>
+
+    <string name="pref_title_ringtone">铃声</string>
+    <string name="pref_ringtone_silent">静音</string>
+
+    <string name="pref_title_vibrate">震动</string>
     <string-array name="pic">
         <item>照相机</item>
         <item>相册</item>

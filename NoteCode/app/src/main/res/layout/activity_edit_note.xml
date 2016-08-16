@@ -44,7 +44,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_margin="15dp"
-        android:src="@mipmap/ic_action_save"
+        android:src="@drawable/ic_action_save"
         fab:fab_colorNormal="@color/app_color"
         fab:fab_colorPressed="@color/white_pressed" />
 

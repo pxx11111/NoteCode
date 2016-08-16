@@ -29,7 +29,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_margin="15dp"
-        android:src="@mipmap/ic_add"
+        android:src="@drawable/ic_add"
         fab:fab_colorNormal="@color/app_color"
         fab:fab_colorPressed="@color/white_pressed" />
 </RelativeLayout>

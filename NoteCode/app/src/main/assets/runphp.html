@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+   	<title>PHP 在线工具 | 安浪PHP教程</title>
+	<link rel="canonical" href="http://c.runoob.com/compile/1" />
+<meta name="keywords" content="PHP 在线工具">
+<meta name="description" content="PHP Hello实例！..">
+   
+			<script src="js/codemirror.min.js"></script>
+		<link rel="stylesheet" href="css/codemirror.css">
+				<script src="js/htmlmixed.js"></script>
+				<script src="js/xml.js"></script>
+				<script src="js/javascript.js"></script>
+				<script src="js/css.js"></script>
+				<script src="js/clike.js"></script>
+				<script src="js/php.js"></script>
+		    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+    <!-- PHP 代码 -->
+    <link rel="stylesheet" href="css/style.css">
+   
+
+	
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+
+
+
+
+
+
+<div class="container">
+	
+
+
+<div class="row">
+
+	<div class="col-md-12">
+		<div class="panel panel-default">
+					<div id="compiler" class="panel-heading">
+			<form class="form-inline" role="form">
+				 <!-- <button type="button" class="btn btn-success" id="submitBTN"><i class="fa fa-send-o"></i> 点击运行</button> -->
+				 <label class=" btn "> <strong style="font-size: 16px"><i class="fa fa-cogs"></i> 安浪 PHP 编译工具</strong></label>
+				 <label  class=" btn ">(不要输入"&#60;?php"和"?&#62;"等PHP标识 )</label>
+			</form>
+			</div>
+			<div class="panel-body">
+			<form role="form" id="compiler-form">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-7">
+                    <textarea class="form-control"  id="code" name="code" rows="12">
+echo 'Hello World!';
+</textarea>
+                 <div style="float:right">
+                  <button type="button" class="btn btn-success" id="submitBTN"><i class="fa fa-send-o"></i> 点击运行</button>
+                  </div>
+
+                  </div>
+                   
+                
+<br><br><br>
+<label class=" btn "> <strong style="font-size: 16px"><i class="fa fa-cogs"></i> 编译结果</strong>(输出代码)</label>
+                  <div class="col-md-5">
+                    <textarea placeholder="运行结果……" class="form-control" id="compiler-textarea-result" rows="12">Hello World!</textarea>
+                  </div>
+
+<label class=" btn "> <strong style="font-size: 16px"><i class="fa fa-cogs"></i>浏览器效果</strong>(HTML解析结果)</label>
+                  <div class="col-md-5">
+                    <div pclass="form-control" id="htmlrs" style="background:#fff;border:1px solid;
+border-radius:3px;" >
+                    	
+                    </div>
+                  </div>
+                </div>
+              </div>
+             
+             
+            </form>
+			</div>
+		</div>
+	</div>
+	
+	
+</div>
+<script>
+var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+	lineNumbers: true,
+	matchBrackets: true,
+	mode: "application/x-httpd-php",
+	indentUnit: 4,
+	indentWithTabs: true,
+});
+$("#submitBTN").click(function() {
+	loadingdata = '程序正在运行中……';
+	var lang = "PHP";
+	var run = "True";
+	var submit = "Submit";
+
+	$("#compiler-textarea-result").val(loadingdata);
+  
+	code = editor.getValue();
+	runcode = 3;
+	$.post("http://phpcompile.anline.cn",{code:code},function(msg){
+		$("#compiler-textarea-result").val(msg);
+		$("#htmlrs").html(msg);
+	});
+});
+</script>
+	
+
+      
+
+<hr>
+
+
+</div>
+<div style="display:none;">
+
+</div>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
