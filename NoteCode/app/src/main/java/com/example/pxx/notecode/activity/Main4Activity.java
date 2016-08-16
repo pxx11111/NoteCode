@@ -61,7 +61,7 @@ public class Main4Activity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "点击代码文件进行侧滑高亮阅读", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });

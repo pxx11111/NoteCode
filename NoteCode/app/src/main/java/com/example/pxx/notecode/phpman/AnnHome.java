@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -102,21 +101,13 @@ private boolean isAvilible( Context context, String packageName )
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            Intent setIntent = new Intent(AnnHome.this,SettingsActivity.class);
-            startActivity(setIntent);
-            return true;
-        }
-        if (id == R.id.action_about) {
-            Intent aboutIntent = new Intent(AnnHome.this,AboutActivity.class);
-            startActivity(aboutIntent);
-            return true;
-        }
-        if (id == R.id.action_website) {
-            Uri anUri = Uri.parse("http://www.anline.cn");
-            startActivity(new Intent(Intent.ACTION_VIEW,anUri));
-           return true;
-        }
+
+//
+//        if (id == R.id.action_website) {
+//            Uri anUri = Uri.parse("http://www.anline.cn");
+//            startActivity(new Intent(Intent.ACTION_VIEW,anUri));
+//           return true;
+//        }
         if (id == R.id.action_scanQRcode) {
 //                扫一扫
 //            Toast.makeText(getApplicationContext(),"网站暂未上线，扫码链接暂时无法处理",Toast.LENGTH_SHORT).show();
@@ -136,20 +127,7 @@ private boolean isAvilible( Context context, String packageName )
             startActivity(goPHPcompile);
             return true;
         }
-        if (id == R.id.action_taobao) {
-//                打开安浪创想淘宝店
 
-        Uri tbUri = Uri.parse("taobao://b.mashort.cn/h.QjVPt?cv=AACqFyoU&sm=f109bb");
-        Uri tbUri2 = Uri.parse("http://b.mashort.cn/h.QjVPt?cv=AACqFyoU&sm=f109bb");
-//            检测淘宝客户端是否安装 安装则启动淘宝客户端
-            if(isAvilible(AnnHome.this, "com.taobao.taobao")) {
-                startActivity(new Intent(Intent.ACTION_VIEW, tbUri));
-            }else {
-//                未安装则打开本地浏览器
-                startActivity(new Intent(Intent.ACTION_VIEW, tbUri2));
-            }
-            return true;
-        }
         /*
         if (id == R.id.action_wechat) {
 //            Uri wxUri = Uri.parse("wechat://http://weixin.qq.com/r/gUwXDwzEdFELrUhs9xmT");
@@ -193,7 +171,7 @@ private boolean isAvilible( Context context, String packageName )
 
             if ((System.currentTimeMillis() - mExitTime) > 2000) {
                 Object mHelperUtils;
-                Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "再按一次进入主界面", Toast.LENGTH_SHORT).show();
                 mExitTime = System.currentTimeMillis();
 
             } else {

@@ -1,5 +1,7 @@
 package com.example.pxx.notecode.activity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -18,6 +20,7 @@ import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 import com.example.pxx.notecode.R;
 import com.example.pxx.notecode.phpman.AnnHome;
@@ -72,7 +75,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "感谢您的支持，有问题请联系xiaoxuan_peng@outlook.com", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -117,7 +120,18 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            AlertDialog.Builder bulBuilder=new AlertDialog.Builder(this);
+            bulBuilder.setIcon(R.drawable.ic_sync_black_24dp);
+            bulBuilder.setTitle("谢谢使用，本代码已开源");
+            bulBuilder.setMessage("本软件借鉴开源社区，欢迎大家指出bug，我的github是pxx11111，谢谢。");
+            bulBuilder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Toast.makeText(MainActivity.this,"谢谢",Toast.LENGTH_LONG).show();
+                }
+            });
+            AlertDialog ad = bulBuilder.create();
+            ad.show();
         }
 
         return super.onOptionsItemSelected(item);

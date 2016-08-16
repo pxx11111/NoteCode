@@ -1,27 +1,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="cn.anline.phpman.AnnHome">
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_about"
-        android:orderInCategory="100"
-        android:title="@string/action_about"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_website"
-        android:orderInCategory="100"
-        android:title="@string/action_website"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_taobao"
-        android:orderInCategory="100"
-        android:title="@string/action_taobao"
-        app:showAsAction="never" />
+    tools:context=".phpman.AnnHome">
+
+
     <!--<item-->
         <!--android:id="@+id/action_wechat"-->
         <!--android:orderInCategory="100"-->

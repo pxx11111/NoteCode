@@ -97,6 +97,7 @@
             android:textOn="关灯"
             android:textOff="开灯"
             android:textSize="11sp"
+            android:drawableTop="@drawable/scan_flashlight_pressed"
             android:textColor="@android:color/white" />
 
         <Button
@@ -105,7 +106,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.0"
             android:background="@null"
-            android:src="@drawable/scan_photo"
+            android:src="@drawable/scan_flashlight"
+            android:drawableTop="@drawable/scan_flashlight_normal"
             android:gravity="center"
             android:text="相册"
             android:textSize="11sp"
